@@ -1,22 +1,60 @@
+.header {
+  background-color: #fff;
+}
+
 .header--container {
   display: flex;
+  align-items: baseline;
+  padding-top: 30px;
+  padding-bottom: 46px;
+
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: 1344px) {
+    padding-top: 30px;
+  }
 }
 
 .header__button {
-  padding: 27px 24px;
-  border: 2px solid #ff6b09;
-  height: 70px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.21;
+  display: none;
 
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  @media (min-width: 768px) {
+    margin-left: auto;
+    padding: 16px 5px;
+    border: 2px solid #ff6b09;
+    height: 48px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25;
 
-  color: #ff6b09;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #ff6b09;
+  }
+
+  @media (min-width: 1343px) {
+    margin-left: 0;
+    padding: 27px 24px;
+    border: 2px solid #ff6b09;
+    height: 70px;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.14em;
+  }
+}
+
+.navigation {
+  margin-right: 60px;
+
+  @media (max-width: 1343px) {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -30,6 +68,7 @@
   display: flex;
   align-items: center;
   text-align: center;
+  letter-spacing: 0;
   text-transform: uppercase;
 
   color: #b9b9b9;
@@ -37,4 +76,44 @@
   &:not(:last-child) {
     margin-right: 40px;
   }
+}
+
+.menu-toggle {
+  background-color: #fff;
+  border: none;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+    margin-left: 40px;
+  }
+
+  @media (min-width: 1344px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  max-width: 100%;
+
+  @media (max-width: 1344px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    padding: 48px 40px;
+    overflow-y: scroll;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+
+  @media (min-width: 1344px) {
+    display: none;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
 }

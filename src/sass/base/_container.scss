@@ -3,8 +3,9 @@
   padding: 0 20px;
   height: 100%;
   max-width: 480px;
+  min-width: 320px;
   @media screen and (min-width: 768px) {
-    max-width: 848px;
+    max-width: 768px;
     padding: 0 40px;
   }
   @media screen and (min-width: 1344px) {
