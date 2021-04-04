@@ -9,6 +9,10 @@
   color: #111518;
 }
 
+.menu__logo {
+  color: $white-color;
+}
+
 .hellEN {
   display: flex;
 }
@@ -29,8 +33,12 @@
   color: #111518;
 }
 
+.menu-logo__text {
+  color: $white-color;
+}
+
 .logo__text2 {
   @extend .logo__text;
   display: inline;
-  color: #ff6b09;
+  color: $accent-color;
 }

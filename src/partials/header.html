@@ -39,19 +39,27 @@
     <!-- Mobile Menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
 
-        <a class="logo menu__logo" href="">
-            <div class="hellEN">
-                Hell
-                <svg class="logo__icon" width="22" height="30">
-                    <use href="./images/svg/sprite.svg#icon-campfire-logo"></use>
+        <div class="menu-wrapper">
+            <a class="logo menu__logo" href="">
+                <div class="hellEN">
+                    Hell
+                    <svg class="logo__icon" width="22" height="30">
+                        <use href="./images/svg/sprite.svg#icon-campfire-logo"></use>
+                    </svg>
+                    EN
+                </div>
+                <p class="logo__text menu-logo__text">
+                    <span class="logo__text2">АДСКИЙ</span>
+                    АНГЛИЙСКИЙ
+                </p>
+            </a>
+            
+            <button class="close-toggle js-close-menu" type="button">
+                <svg class="menu-toggle__icon" width="14.5" height="14.5">
+                    <use href="./images/svg/sprite.svg#icon-close"></use>
                 </svg>
-                EN
-            </div>
-            <p class="logo__text">
-                <span class="logo__text2">АДСКИЙ</span>
-                АНГЛИЙСКИЙ
-            </p>
-        </a>
+            </button>
+        </div>
 
         <ul class="menu__list">
             <li class="menu__list-item">Программа обучени</li>
@@ -60,12 +68,11 @@
             <li class="menu__list-item">Контакты</li>
         </ul>
 
-        <button class="close-toggle js-close-menu" type="button">
-            <svg class="menu-toggle__icon" width="20" height="12">
-                <use href="./images/svg/sprite.svg#icon-close"></use>
-            </svg>
+        <button class="header__button menu--header__button">
+            КОНСУЛЬТАЦИЯ ПО ТЕЛЕФОНУ
         </button>
-    </div>
+
+     </div>
 
 </header>
 <!-- Mobile menu toggle script -->
