@@ -45,15 +45,16 @@ img {
 }
 
 .about__name {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  //   margin-top: 10px;
+  margin-bottom: 20px;
   font-weight: 800;
   font-size: 20px;
-  //   line-height: 1.2;
+  line-height: 1.2;
   color: $main-color;
   text-align: left;
-  line-height: 36px;
+
   border-bottom: 1px solid $secondary-color;
+  padding-bottom: 10px;
   @media screen and (min-width: 768px) {
     margin-top: 0px;
   }
@@ -71,10 +72,6 @@ img {
 
 .about__item {
   display: flex;
-  font-weight: 600px;
-  font-size: 14px;
-  line-height: 1.22;
-
   @media screen and (min-width: 1344px) {
     font-size: 16px;
     line-height: 1.14;
@@ -94,12 +91,27 @@ img {
   width: 17px;
   height: 14px;
   margin-right: 9px;
-  background: url(/images/svg/check-mark.svg) no-repeat 0 0;
+  background: url(../images/svg/check-mark.svg) no-repeat 0 0;
   @media screen and (min-width: 1344px) {
     width: 24px;
     height: 20px;
     margin-right: 34.6px;
   }
+}
+
+.about__description {
+  font-weight: 600px;
+  font-size: 14px;
+  line-height: 1.22;
+}
+
+.about__dash {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  line-height: 1.65;
+  color: $accent-color;
 }
 
 .about__her {

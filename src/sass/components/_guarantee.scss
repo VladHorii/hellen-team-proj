@@ -14,8 +14,19 @@
 }
 
 .guarantee__list {
+  background-color: #f1f1f1;
+  padding-left: 27px;
+  padding-right: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-left: 86px;
+  }
+  @media screen and (min-width: 1344px) {
+    padding-left: 123px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
 }
 
 .guarantee__description {
@@ -58,7 +69,7 @@
   flex-shrink: 0;
   width: 14.37px;
   height: 20px;
-  background: url(/images/svg/fire.svg);
+  background: url(../images/svg/fire.svg);
   background-repeat: no-repeat;
   left: -6.7px;
 
