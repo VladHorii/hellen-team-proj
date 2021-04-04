@@ -2,19 +2,34 @@
   display: block;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: linear-gradient(to bottom, $main-color 70%, $white-color 30%);
+  background: linear-gradient(to bottom, $main-color 70%, $white-color 30%);
 
   @media screen and(min-width: 768px) {
     padding-top: 60px;
 
-    background-image: linear-gradient(to bottom, $main-color 65%, $white-color 35%);
+    background: linear-gradient(to bottom, $main-color 65%, $white-color 35%);
   }
 
   @media screen and(min-width: 1344px) {
+    position: relative;
+    z-index: 0;
     padding-top: 100px;
     padding-bottom: 130px;
 
-    background-image: linear-gradient(to bottom, $main-color 65%, $white-color 35%);
+    background: linear-gradient(to bottom, #111518 67%, #ffffff 33%);
+
+    &::before {
+      content: '';
+      width: 455px;
+      height: 472px;
+      background-image: url('../images/svg/problems__fire2.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: -48px;
+      bottom: 273px;
+      z-index: -1;
+    }
   }
 }
 
@@ -113,7 +128,6 @@
 
 .problems-list__item {
   margin-top: 10px;
-  height: 56px;
   width: 240px;
   counter-increment: number;
 
@@ -135,12 +149,6 @@
     letter-spacing: 0.08em;
     color: $accent-color;
 
-    @media screen and(min-width: 768px) {
-      // font-size: 14px;
-      // line-height: 17px;
-      // letter-spacing: 0.08em;
-    }
-
     @media screen and(min-width: 1344px) {
       margin-bottom: 10px;
 
@@ -152,7 +160,7 @@
   @media screen and(min-width: 768px) {
     margin-left: 22px;
     margin-top: 30px;
-    height: 53px;
+
     width: 240px;
 
     flex-basis: calc((100% - 44px) / 2);
@@ -164,7 +172,6 @@
   @media screen and(min-width: 1344px) {
     margin-left: 42px;
     margin-top: 32px;
-    height: 100px;
     width: 336px;
 
     flex-basis: calc((100% - 126px) / 3);
