@@ -1,0 +1,288 @@
+
+.section-form {
+    background-image: url("../images/background-footer.png"), 
+    url("../images/pic-footer.png");
+
+    // margin: 0 auto;
+    font-family: Montserrat;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+    background-color: #111518;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% 50%;
+    padding: 50px 0;
+    & .container{
+        padding: 0 20px;
+        margin: 0 auto;
+        width: 320px;
+    }
+}
+.registration form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .registration-form-title{
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 1.307;
+        letter-spacing: .03em;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    & .registration-form-text{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.21;
+        letter-spacing: .08em;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    & .registration-form-widow:not(:last-child){
+        display: block;
+        margin-bottom: 20px;
+    }
+    .registration-form-input{
+        width: 280px;
+        height: 48px;
+        padding-left: 28px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.214;
+        letter-spacing: .08em;
+        color: #fff;
+        transition: all .250ms cubic-bezier(0.4, 0, 0.2, 1);
+        outline: none;
+    }
+    .registration-form-button{
+        width: 260px;
+        height: 48px;
+        padding: 14px 0;
+        margin-top: 50px;
+        outline: none;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.25;
+        letter-spacing: .08em;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: #ff6b09;
+        border: 2px solid #ff6b09;
+        transition: all .250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+.contact-part{
+    padding: 30px 0;
+
+    & .container{
+        padding: 0 20px;
+        margin: 0 auto;
+        max-width: 320px; 
+        & .logo{
+            margin: 0 auto;
+        }
+        & .phone-link{
+            display: flex;
+            align-items: center;
+            margin: 20px auto 30px;
+            // width: fit-content;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.21;
+            color: #111518;
+        }
+        & .phone-link-icon{
+            width: 20px;
+            height: 20px;
+            // float: left;
+            margin-left: 40px;
+            margin-right: 10px;
+        }
+        & .insta-link{
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            width: fit-content
+        }
+    }
+
+    & .botom-part{
+        height: 70px;
+        background-color: #111518;
+        padding: 20px 0;
+
+        & .container{
+            margin: 0 auto;
+            max-width: 320px;
+            text-align: center;
+
+            & .copy-rights-text{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 2;
+                color: #b9b9b9;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1343px) and (min-width: 768px){
+    .section-form {
+        padding: 50px 0 70px;
+        background-image:url("../images/background-footer.png"), 
+        url("../images/pic-3.png");
+
+        & .registration-form-title{
+            font-weight: 800;
+            font-size: 26px;
+        }
+        & .registration-form-text{
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        & .registration-form-input{
+            width: 280px;
+        }
+        & .registration-form-button{
+            margin-top: 30px;
+        }
+    }
+
+    .contact-part{
+        padding: 40px 0;
+        & .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 768px;
+            padding: 0 40px;
+            & .logo{
+                margin: 0 ;
+                width: 128px;
+            }
+            & .phone-link{
+                margin: 0 24px 0 auto;
+                font-size: 20px;
+            }
+            & .phone-link-icon{
+                width: 24px;
+                height: 24px;
+            }
+            & .insta-link{
+                display: flex;
+                margin: 0 ;
+                border-left: 1px;
+                border-color: #B9B9B9 ;
+                // width: fit-content
+                & .insta-link-icon{
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+    .botom-part{
+        text-align: left;
+        & .container{
+            max-width: 768px;
+            padding: 0 40px;
+        }
+    }  
+}
+@media screen and (max-width: 1343px) and (min-width: 768px){
+    .section-form {
+         background-image: url("../images/background-footer-3.png"), 
+         url("../images/pic-3.png");
+        padding: 50px 0 70px;
+    }
+    .registration-form-title{
+        font-size: 26px;
+        line-height: 1.357;
+        letter-spacing: .03em;
+        color: #fff;
+    }
+    .registration-form-text{
+        font-size: 14px;
+        line-height: 1.21;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (min-width: 1344px){
+    .section-form{
+        background-image: url("../images/background-footer-3.png"), 
+        url("../images/pic-3.png");
+        padding: 100px 0 62px;
+        background-position: 50%;
+    
+        & .registration-form-title{
+            width: 1090px;
+            font-size: 46px;
+            margin-bottom: 50px;
+        }
+        & .registration-form-text{
+            font-size: 30px;
+            margin-bottom: 56px;
+        }
+        .registration-form-widow:not(:last-child){
+            display: block;
+            margin-bottom: 30px;
+        }
+        & .registration-form-input{
+            width: 478px;
+            height: 70px;
+            font-size: 20px;
+        }
+        & .registration-form-button{
+            margin-top: 80px;
+            width: 354px;
+            height: 70px;
+        }
+    }
+    .contact-part{
+        padding: 55px 0;
+        & .container{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            & .phone-link{
+                margin: 0 20px 0 290px;
+                font-size: 30px;
+                letter-spacing: 2px;
+            }
+            & .phone-link-icon{
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+            & .insta-link{
+                display: flex;
+                margin: 0 ;
+                border-left: 1px;
+                border-color: #B9B9B9 ;
+                // width: fit-content
+                & .insta-link-icon{
+                    padding-left: 24px;
+                }
+            }
+        }
+    } 
+}
+
+@media not all, screen and (min-width: 1344px) and (min-resolution: 2dppx) and (min-width: 1344px), screen and (min-width: 1344px) and (min-resolution: 192dpi) and (min-width: 1344px){
+    .section-form {
+    background-image: url("../images/background-footer-3.png"), 
+     url("../images/pic-3@2x.png");
+    }
+
+}
