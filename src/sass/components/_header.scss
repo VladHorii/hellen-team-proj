@@ -76,6 +76,15 @@
   &:not(:last-child) {
     margin-right: 40px;
   }
+
+  transition: background-color $anim-duration $anim-timing;
+}
+
+.navigation__item:hover,
+.navigation__item:focus,
+.navigation__item:active {
+  color: $accent-color;
+  cursor: pointer;
 }
 
 .menu-toggle {
