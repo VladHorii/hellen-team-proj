@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   @media (max-width: 768px) {
     height: 688px;
     background-position: -100px;
@@ -22,7 +23,7 @@ body {
   }
   @media (min-width: 1344px) {
     padding-bottom: 152px;
-    padding-top: 150px;
+    padding-top: 229px;
   }
 }
 
@@ -31,7 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin: 0 auto;
   }
 }
 .hero__list {
@@ -97,7 +97,7 @@ body {
 }
 
 .hero__span {
-  color: #ff6b09;
+  color: $accent-color;
 }
 
 .hero__button {
@@ -113,8 +113,8 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 
-  color: #ffffff;
-  background-color: #ff6b09;
+  color: $white-color;
+  background-color: $accent-color;
   border: none;
 
   @media (min-width: 1344px) {
@@ -131,7 +131,7 @@ body {
   @media (min-width: 768px) {
     position: absolute;
     height: 320px;
-    top: 160px;
+    top: 171px;
     right: 0;
   }
 
@@ -141,9 +141,10 @@ body {
     right: 0;
   }
 
-  // @media (min-width: 1600px) {
-  //   height: 718px;
-  // }
+  @media (min-width: 1600px) {
+    height: 718px;
+    transform: translateX(120px);
+  }
 }
 
 .hero__image {
