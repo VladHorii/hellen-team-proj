@@ -12,6 +12,11 @@ body {
   background-position: center;
   background-size: cover;
 
+  @media (max-width: 767px) {
+    background-position: -260px;
+    height: 648px;
+  }
+
   @media (min-width: 768px) {
     padding-bottom: 92px;
     padding-top: 158px;
@@ -22,9 +27,20 @@ body {
   }
 }
 
+.hero__overlay {
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin: 0 auto;
+  }
+}
 .hero__list {
   width: 280px;
   margin-bottom: 30px;
+  @media (max-width: 767px) {
+    padding-top: 30px;
+  }
 
   @media (min-width: 1344px) {
     width: 536px;
@@ -111,10 +127,10 @@ body {
 }
 
 .hero__thumb {
-  position: absolute;
   height: 177px;
 
   @media (min-width: 768px) {
+    position: absolute;
     height: 320px;
     top: 160px;
     right: 0;
@@ -126,9 +142,9 @@ body {
     right: 0;
   }
 
-  @media (min-width: 1600px) {
-    height: 718px;
-  }
+  // @media (min-width: 1600px) {
+  //   height: 718px;
+  // }
 }
 
 .hero__image {
