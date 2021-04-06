@@ -1,8 +1,22 @@
 .hero__overlay {
   background-image: url(../images/shadow_line_hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__list {
+  width: 280px;
+  margin-bottom: 30px;
+
+  @media (min-width: 1344px) {
+    width: 536px;
+  }
 }
 
 .hero__title {
+  width: 280px;
+  padding-top: 109px;
   font-weight: 800;
   font-size: 20px;
   line-height: 1.36;
@@ -16,6 +30,8 @@
 
   @media (min-width: 1344px) {
     font-size: 58px;
+    margin-bottom: 24px;
+    width: 642px;
   }
 }
 
@@ -33,6 +49,8 @@
 }
 
 .hero__item:last-child {
+  display: flex;
+  flex-wrap: wrap;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.57;
@@ -52,6 +70,7 @@
 .hero__button {
   padding-top: 14px;
   padding-bottom: 14px;
+  margin-bottom: 30px;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.25;
@@ -71,4 +90,12 @@
     line-height: 1.21;
     letter-spacing: 0.14em;
   }
+}
+
+.hero__thumb {
+  height: 177px;
+}
+
+.hero__image {
+  height: 100%;
 }
