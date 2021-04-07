@@ -61,7 +61,7 @@
   display: flex;
 }
 
-.navigation__item {
+.navigation__link {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
@@ -73,9 +73,14 @@
 
   color: $secondary-color;
 
-  &:not(:last-child) {
-    margin-right: 40px;
+  &:hover,
+  &:focus {
+    color: $accent-color;
   }
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .menu-toggle {
