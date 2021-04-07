@@ -35,11 +35,6 @@
   transition: transform $anim-duration $anim-timing;
 }
 
-.data-modal-open {
-  overflow: hidden;
-  position: fixed;
-}
-
 .backdrop-close {
   display: flex;
   position: absolute;
