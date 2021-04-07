@@ -122,6 +122,7 @@
 .menu-container {
   max-width: 100%;
   padding: 30px 20px;
+  z-index: 54;
 
   @media (max-width: 1344px) {
     position: fixed;
