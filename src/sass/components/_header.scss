@@ -20,6 +20,12 @@
 .header__button {
   display: none;
 
+  background-image: linear-gradient(45deg, $accent-color 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background $anim-duration $anim-timing, color $anim-duration $anim-timing;
+  cursor: pointer;
+
   @media (min-width: 768px) {
     margin-left: auto;
     padding: 16px 5px;
@@ -46,6 +52,12 @@
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.14em;
+  }
+
+  &:hover,
+  &:focus {
+    background-position: 0;
+    color: $white-color;
   }
 }
 
@@ -76,6 +88,15 @@
   &:not(:last-child) {
     margin-right: 40px;
   }
+
+  transition: color $anim-duration $anim-timing;
+}
+
+.navigation__item:hover,
+.navigation__item:focus,
+.navigation__item:active {
+  color: $accent-color;
+  cursor: pointer;
 }
 
 .menu-toggle {

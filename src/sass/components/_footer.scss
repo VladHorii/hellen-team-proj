@@ -130,7 +130,7 @@
       background-image: url('../images/footer-tab@2x.png');
     }
   }
-  .container footer-container {
+  .footer-container {
     display: flex;
     justify-content: center;
   }
@@ -211,7 +211,7 @@
   padding: 30px 0;
   background-color: $background-color;
 
-  & .container footer-container {
+  & .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -226,7 +226,7 @@
   @media screen and (min-width: 768px) {
     padding: 40px 0;
 
-    & .container footer-container {
+    & .footer-container {
       flex-direction: row;
 
       & .logo-footer {
@@ -240,7 +240,7 @@
     padding: 56px 0;
     margin: 0 auto;
 
-    & .container footer-container {
+    & .footer-container {
       text-align: left;
       justify-content: start;
 
@@ -331,13 +331,13 @@
   }
 
   @media screen and (min-width: 768px) {
-    .container footer-container {
+    .footer-container {
       display: block;
       text-align: left;
     }
   }
   @media screen and (min-width: 1344px) {
-    .container footer-container {
+    .footer-container {
       display: block;
       text-align: left;
       margin: auto;
