@@ -1,5 +1,20 @@
+.about {
+  @media screen and(min-width: 320px) and(min-width: 380px) and(min-width: 480px) {
+  }
+  padding-top: 335px;
+  background-color: $white-color;
+
+  @media screen and(min-width: 768px) {
+    padding-top: 345px;
+  }
+
+  @media screen and(min-width: 1344px) {
+    padding-top: 415px;
+  }
+}
+
 .about__title {
-  margin-top: 39px;
+  // margin-top: 39px;
   margin-bottom: 20px;
   font-weight: 800;
   font-size: 20px;
@@ -8,13 +23,13 @@
   text-align: left;
 
   @media screen and (min-width: 768px) {
-    margin-top: 50px;
+    // margin-top: 50px;
     margin-bottom: 30px;
     font-size: 26px;
   }
 
   @media screen and (min-width: 1344px) {
-    margin-top: 130px;
+    // margin-top: 130px;
     margin-bottom: 50px;
     font-size: 46px;
   }
