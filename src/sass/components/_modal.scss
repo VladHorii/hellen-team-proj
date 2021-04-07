@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
 
   opacity: 1;
   transition: opacity $anim-duration $anim-timing;
@@ -20,191 +20,189 @@
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-@media screen and (min-width: 320px) {
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 450px;
-    max-height: 609px;
+// @media screen and (min-width: 320px) {
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 480px;
+  max-height: 520px;
 
-    background-color: $white-color;
+  background-color: $white-color;
 
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform $anim-duration $anim-timing;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $anim-duration $anim-timing;
+}
+
+.data-modal-open {
+  overflow: hidden;
+  position: fixed;
+}
+
+.backdrop-close {
+  display: flex;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  color: $main-color;
+  background-color: $white-color;
+  transition: color $anim-duration $anim-timing;
+  outline: none;
+
+  &__icon svg {
+    fill: $main-color;
   }
 
-  .backdrop-close {
-    display: flex;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    color: $main-color;
-    background-color: $white-color;
-    transition: color $anim-duration $anim-timing;
-    outline: none;
-
-    &__icon svg {
-      fill: $main-color;
-    }
-
-    &:hover &__icon,
-    &:focus &__icon {
-      fill: $accent-color;
-    }
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $accent-color;
   }
+}
 
-  /* Шрифт и размеры для формы заказа */
-  .order-form {
-    padding: 40px;
-  }
+.order-form {
+  padding: 40px;
 
-  .order-form__title {
-    font-weight: 600;
-    font-size: 44px;
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.03em;
     text-align: center;
+    letter-spacing: 0.08em;
     margin-top: 0px;
     margin-bottom: 12px;
 
     color: $main-color;
   }
 
-  .order-form__label {
-    display: flex;
-    font-weight: 400;
+  &__label {
+    font-weight: 500;
     font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    text-align: left;
-
+    line-height: 1.43;
+    align-items: left;
+    letter-spacing: 0.08em;
     margin-bottom: 4px;
 
-    color: $secondary-color;
+    color: $third-color;
   }
 
-  /* Кнопка заказа */
-  .order-form__button {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-height: 50px;
-    max-width: 200px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 55px;
-    border-width: 0px;
-    border-radius: 4px;
-
-    background-color: $accent-color;
-    color: $white-color;
-    transition: background-color $anim-duration $anim-timing, color $anim-duration $anim-timing;
-
-    .order-form:hover,
-    .order-form:focus,
-    .order-form:active {
-      background-color: #188ce8;
-    }
-  }
-
-  .order-form__wrapper {
+  &__input-wrapper {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
   }
-  .order-form__input {
+
+  &__input {
     position: relative;
-    max-width: 370px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    align-items: center;
+    letter-spacing: 0.08em;
+    max-width: 320px;
     height: 40px;
     outline: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid $main-color;
     box-sizing: border-box;
     border-radius: 4px;
     padding-left: 42px;
     transition: border-color $anim-duration $anim-timing;
   }
 
-  .order-form__icon {
+  &__modal-icon {
     position: absolute;
     transform: translateX(50%) translateY(60%);
     justify-content: left;
     align-items: center;
-    //   color: $third-color;
-    fill: currentColor;
+    fill: $main-color;
     transition: color $anim-duration $anim-timing;
   }
 
-  .order-form__wrapper:focus-within > .order-form__icon {
-    color: $accent-color;
+  &__input-wrapper:focus-within > &__modal-icon {
+    fill: $accent-color;
   }
-  .order-form__wrapper:focus-within > .order-form__input {
+  &__input-wrapper:focus-within > &__input {
+    border-color: $accent-color;
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50px;
+    min-width: 200px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;
+    border-width: 0px;
+    border-radius: 4px;
+
+    background-color: $accent-color;
+    border: solid 2px $accent-color;
+    color: $white-color;
+    transition: background-color $anim-duration $anim-timing, color $anim-duration $anim-timing;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-color;
+      background-color: $white-color;
+    }
+  }
+
+  &__comment {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    width: 320px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 12px 16px 12px 16px;
+    outline: none;
+    border: 1px solid $main-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: $third-color;
+  }
+
+  &__comment:focus-within {
     border-color: $accent-color;
   }
 }
 
-.comment {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  display: flex;
-  flex-direction: column;
-  resize: none;
-  max-width: 370px;
-  height: 120px;
-  margin-bottom: 20px;
-  padding: 12px 16px 12px 16px;
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  color: rgba(117, 117, 117, 0.5);
-}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .modal {
+    max-width: 320px;
+  }
 
-.comment:focus-within {
-  border-color: $accent-color;
-}
-
-@media screen and (min-width: 450px) {
-  .comment {
-    width: 370px;
+  .order-form__comment {
+    width: 240px;
   }
 }
-// }
 
-// Cтили для десктопа
+@media screen and (min-width: 768px) {
+  .order-form__input {
+    max-width: 400px;
+  }
 
-// @media screen and (min-width: 1200px) {
-//   .modal {
-//     width: 528px;
-//     max-height: 581px;
-//   }
-
-//   // /* Шрифт и размеры для формы заказа */
-//   .order-form {
-//     &__title {
-//       line-height: 1.15;
-//     }
-//     &__input {
-//       max-width: 448px;
-//     }
-
-//     .comment {
-//       width: 448px;
-//     }
-//   }
+  .order-form__comment {
+    width: 400px;
+  }
+}
