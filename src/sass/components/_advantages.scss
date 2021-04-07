@@ -1,5 +1,5 @@
 .advantages {
-  background-color: $background-color;
+  background-color: $white-color;
 }
 .advantages__container {
   padding: 30px 52px 50px 52px;
@@ -14,7 +14,6 @@
 .advantages__item {
   display: flex;
   align-items: center;
-  justify-content: center;
 
   color: $main-color;
 }
