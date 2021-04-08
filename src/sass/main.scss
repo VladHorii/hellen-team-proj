@@ -10,6 +10,7 @@
 // Компоненты
 @import './components/text';
 @import './components/header';
+@import './components/logo';
 @import './components/hero';
 @import './components/advantages';
 @import './components/problems';
@@ -21,3 +22,7 @@
 @import './components/reviews';
 @import './components/contacts';
 @import './components/footer';
+
+//
+@import './components/slider';
+@import './components/modal';
