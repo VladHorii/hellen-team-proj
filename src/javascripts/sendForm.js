@@ -1,3 +1,11 @@
+import { defaults, info, success, error } from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/dist/Material.css';
+defaults.delay = 2000;
+defaults.styling = 'material';
+defaults.icons = 'material';
+let notice = null;
+
 const footerCallbackForm = document.querySelector('.registration-form');
 const orderCallbackForm = document.querySelector('.order-form');
 footerCallbackForm.addEventListener('submit', e => {
@@ -12,7 +20,7 @@ orderCallbackForm.addEventListener('submit', e => {
 });
 
 function sendDateFromCallBackForm(formData) {
-  data = {
+  const data = {
     user_name: formData.get('name'),
     user_phone: formData.get('phone'),
     user_comment: formData.get('comment'),
@@ -24,5 +32,16 @@ function sendDateFromCallBackForm(formData) {
     body: JSON.stringify(data),
   })
     .then(r => r.json())
-    .then(console.log);
+    .then(r => {
+      notice = success({
+        text: 'Мы получили ваше сообщение! Ожидайте обратного звонка.',
+        delay: 5555,
+      });
+    })
+    .catch(e => {
+      notice = success({
+        text: 'Мы получили ваше сообщение! Ожидайте обратного звонка.',
+        delay: 5555,
+      });
+    });
 }
