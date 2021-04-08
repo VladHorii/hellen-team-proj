@@ -26,6 +26,13 @@ function sendDateFromCallBackForm(formData) {
     user_comment: formData.get('comment'),
   };
 
+  if (data.user_name.length < 3 && data.user_phone.length < 3) {
+    return (notice = error({
+      text: 'Вы ввели неверное значение.',
+      delay: 5555,
+    }));
+  }
+
   fetch('http://sampsoft.h1n.ru/hellEn.php', {
     method: 'POST',
     mode: 'no-cors',
