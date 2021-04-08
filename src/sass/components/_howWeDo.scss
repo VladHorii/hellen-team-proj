@@ -46,7 +46,16 @@
     margin-left: -30px;
   }
 }
-
+.howWeDo-list__wrapper {
+  background: transparent;
+  transition: background $anim-duration $anim-timing;
+  height: 100%;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $accent-color;
+  }
+}
 .howWeDo-list__item {
   margin-bottom: 15px;
   margin-left: auto;
@@ -54,20 +63,10 @@
   height: 280px;
   // width: 280px;
 
-  background: transparent;
-
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-
-  transition: background $anim-duration $anim-timing;
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: $accent-color;
   }
 
   @media screen and(min-width: 768px) {

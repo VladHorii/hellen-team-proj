@@ -114,14 +114,28 @@ body {
   text-transform: uppercase;
 
   color: $white-color;
-  background-color: $accent-color;
+  // background-color: $accent-color;
   border: none;
+  background-image: linear-gradient(45deg, $accent-color 50%, transparent 50%);
+  transition: background $anim-duration $anim-timing, border $anim-duration $anim-timing 50ms,
+    color $anim-duration $anim-timing;
+  background-size: 400%;
+  border: 2px solid transparent;
+  background-position: 0;
+  cursor: pointer;
 
   @media (min-width: 1344px) {
     padding: 26px;
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.14em;
+  }
+  &:hover,
+  &:focus {
+    color: $main-color;
+    border: 2px solid $accent-color;
+
+    background-position: 100%;
   }
 }
 
