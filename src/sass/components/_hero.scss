@@ -98,16 +98,25 @@ body {
 
 .hero__span {
   color: $accent-color;
+
+  @media (min-width: 1344px) {
+    margin-left: 5px;
+  }
 }
 
 .hero__button {
+  cursor: pointer;
+
+  // position: absolute;
+  z-index: 1;
+  display: inline-block;
   padding-top: 14px;
   padding-bottom: 14px;
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.25;
-  display: flex;
+
   align-items: center;
   text-align: center;
   letter-spacing: 0.08em;
@@ -115,13 +124,26 @@ body {
 
   color: $white-color;
   background-color: $accent-color;
-  border: none;
+  border-color: transparent;
+
+  background-image: linear-gradient(45deg, $white-color 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background $anim-duration $anim-timing, color $anim-duration $anim-timing;
 
   @media (min-width: 1344px) {
     padding: 26px;
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.14em;
+  }
+
+  &:hover,
+  &:active {
+    color: $accent-color;
+    background-color: $white-color;
+    border-color: $accent-color;
+    background-position: 0;
   }
 }
 
