@@ -10,3 +10,12 @@ $('a[href*="#"]').click(function () {
   );
   return false;
 });
+$('button[data-scroll]').click(function () {
+  $page.animate(
+    {
+      scrollTop: $(`#${$.attr(this, 'data-scroll')}`).offset().top,
+    },
+    400,
+  );
+  return false;
+});
