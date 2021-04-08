@@ -124,14 +124,13 @@ body {
 
   color: $white-color;
   // background-color: $accent-color;
-  border: none;
+
   background-image: linear-gradient(45deg, $accent-color 50%, transparent 50%);
   transition: background $anim-duration $anim-timing, border $anim-duration $anim-timing 50ms,
     color $anim-duration $anim-timing;
   background-size: 400%;
   border: 2px solid transparent;
   background-position: 0;
-  cursor: pointer;
 
   @media (min-width: 1344px) {
     padding: 26px;
