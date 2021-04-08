@@ -24,3 +24,11 @@ window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
   openMenuBtn.setAttribute('aria-expanded', false);
   bodyScrollLock.enableBodyScroll(document.body);
 });
+
+document.querySelectorAll('.navigation__link--mobile').forEach(el => {
+  el.addEventListener('click', e => {
+    bodyScrollLock.enableBodyScroll(document.body);
+    document.querySelector('.js-open-menu').setAttribute('aria-expanded', 'false');
+    document.querySelector('.js-menu-container').classList.toggle('is-open');
+  });
+});

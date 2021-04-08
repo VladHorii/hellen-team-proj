@@ -190,7 +190,13 @@
   letter-spacing: 0.03em;
   color: $white-color;
 }
-
+.navigation__link--mobile {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: $white-color;
+}
 .menu--header__button {
   @media (max-width: 767px) {
     padding: 16px 5px;
