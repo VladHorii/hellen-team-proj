@@ -19,11 +19,11 @@ body {
 
   @media (min-width: 768px) {
     padding-bottom: 92px;
-    padding-top: 158px;
+    // padding-top: 158px;
   }
   @media (min-width: 1344px) {
     padding-bottom: 152px;
-    padding-top: 229px;
+    // padding-top: 229px;
   }
 }
 
@@ -48,7 +48,7 @@ body {
 
 .hero__title {
   width: 280px;
-  padding-top: 109px;
+  // padding-top: 109px;
   font-weight: 800;
   font-size: 20px;
   line-height: 1.36;
@@ -124,14 +124,13 @@ body {
 
   color: $white-color;
   // background-color: $accent-color;
-  border: none;
+
   background-image: linear-gradient(45deg, $accent-color 50%, transparent 50%);
   transition: background $anim-duration $anim-timing, border $anim-duration $anim-timing 50ms,
     color $anim-duration $anim-timing;
   background-size: 400%;
   border: 2px solid transparent;
   background-position: 0;
-  cursor: pointer;
 
   @media (min-width: 1344px) {
     padding: 26px;
@@ -154,13 +153,15 @@ body {
   @media (min-width: 768px) {
     position: absolute;
     height: 320px;
-    top: 171px;
+    // top: 171px;
+    top: 0;
     right: 0;
   }
 
   @media (min-width: 1344px) {
     height: 620px;
-    top: 150px;
+    // top: 150px;
+    top: 0;
     right: 0;
   }
 

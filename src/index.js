@@ -5,3 +5,4 @@ import './javascripts/mobile-menu.js';
 import './js/modal.js';
 import './javascripts/sendForm';
 import './js/wowjsSettings';
+import './js/scrollTo';
