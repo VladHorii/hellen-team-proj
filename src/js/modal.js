@@ -23,3 +23,17 @@ function toggleModal() {
     : 'disableBodyScroll';
   bodyScrollLock[scrollLockMethod](document.body);
 }
+document.querySelector('.order-form').addEventListener('submit', e => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+  const data = {
+    user_name: formData.get('name'),
+    user_phone: formData.get('phone'),
+  };
+  if (data.user_name.length < 3 && data.user_phone.length < 3) {
+    return;
+  }
+
+  toggleModal();
+});
